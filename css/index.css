@@ -1,0 +1,681 @@
+@charset 'utf-8';
+
+    
+    /* 인트로 스타일 */
+    .intro{      
+      max-width:2000px;
+      height:390px;
+      margin:-72px auto 0;
+      padding-top:82px;
+      overflow:hidden;
+      position:relative;
+      width: 100%;
+    }
+    .intro .my_slider .slider{
+      position:absolute;
+      left:0;
+      right:0;
+      top:0;
+      bottom:0;      
+      background-position:center;
+      background-size:640px;
+      opacity:0;
+      transition:0.3s;
+    }
+
+    .slider .btn_more,.btn_page,.btn_prev,.btn_next{
+      cursor: pointer;
+    }
+    .slider h3,.slider p{
+      font-size:36px;
+      color:#333;
+      text-align:center;
+      padding:38px 0;
+      text-shadow:0 0 1px #fff;;
+    }
+    .slider p{
+      font-size:16px;
+      line-height:30px;
+      padding:0;
+    }
+    .slider .btn_more{
+      width:132px;
+      height:44px;
+      margin:10px auto 32px;
+      background-color:#df0000;
+      font-size:18px;
+      font-weight:bold;
+      color:#fff;
+      display:flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .slider02 .btn_more{
+      background-color:#ff9600;
+      color:#181818;
+    }
+    .btn_page{
+      display:flex;
+      flex-flow:row nowrap;
+      justify-content:center;
+      position:absolute;
+      left:0;
+      right:0;
+      bottom:24px;
+      z-index:2;
+    }
+    .btn_page li{
+      width:10px;
+      height:10px;
+      margin: 0 5px;
+      border:1px solid #333;
+      border-radius:50%;
+      background-color:#fff;
+      text-indent:-9999px;
+    }
+    .btn_page li.active{
+      background-color:#ff9600;
+    }
+    .btn_prev_next{
+      padding:0 24px;
+      position:absolute;
+      left:0;
+      right:0;
+      top:50%;
+      z-index:2;
+      transform:translateY(-50%);
+      display:none;
+      justify-content:space-between;
+    }
+    .btn_prev_next i::before{
+      font-size:56px;
+    }
+
+    /* about스타일 */
+    #about{
+      display: flex; 
+      flex-direction: column; 
+      align-items: center; 
+      justify-content: center;
+    }
+    .arrow1,.arrow2{
+      width: 100px;
+    }
+    .arrow_tit{
+      display: flex; 
+      justify-content: center; 
+      margin-top: 20px;
+    }
+    .btn2{
+      display: none;
+    }
+    .text2{
+      display: none;
+    }
+    .favicon{
+      width: 30px;
+      height: 30px;
+    }
+    .about_tit{
+      font-size: 3rem;
+      text-shadow:6px 5px 5px gray , 6px 6px 0 red;
+      color: lightblue;
+      padding-bottom: 1.3rem;
+  
+    }
+    .introduce1{
+      display: flex; 
+      flex-direction: column; 
+      margin-left: 100px; 
+      width: 400px;
+      height: 120px;
+    }
+    .my_photo{
+      display: block;
+      margin: 0 auto;
+      padding-top: 15px;
+    }
+    .text1{
+      position: relative;
+    }
+    .text1,.text1_1,.text2{
+      padding-top: 1rem;
+      font-size: 30px;
+      font-weight: 500;
+      color: #333;
+      font-family: 'Nanum Pen Script', cursive;;
+    }
+    .text1_1{
+      margin-left: 14%;
+      padding: 0;
+    }
+    .arrow_tit{
+      display: flex;
+      justify-content: center;
+    }
+    .arrow1,.arrow2{
+      width: 100px;
+      height: 50px; 
+      background-image: url(../images/works_web_arrow.png); 
+      background-repeat: no-repeat;
+    }
+    .arrow2{
+      display: none;
+    }
+    /* skills 스타일 */
+    .skills{
+      background-color:#df0000;
+    }
+    .skills_content{
+      overflow:initial;
+    }
+    .skills_content h2,.skills_content p{
+      transform:none;
+      opacity:1;
+      color:#fff;
+      text-align: center;
+      padding-bottom: 1rem;
+    }
+    .skills_content .img_box{
+      margin-bottom:0;
+    }
+    .skills_content ul{
+      display:flex;
+      flex-flow:row wrap;
+      justify-content:space-between;
+    }
+    .skills_content ul li{
+      width:46.42857142857143%;
+      margin-bottom:30px;
+    }
+    .skills_content ul li:nth-child(5),
+    .skills_content ul li:nth-child(6){
+      margin-bottom:0;
+    }
+    .skill_img{
+      width:66px;
+      margin:0 auto 9px;
+      filter:grayscale(1);
+    }
+    .skills_content ul li:hover .skill_img{
+      filter:grayscale(0);
+      transform:rotate(15deg) scale(1.1);
+    }
+    .skill_txt{
+      font-size:14px;
+      text-align:center;
+      color:#fff;
+    }
+
+    /* 모달 스타일 */
+    #modal_back{
+      width: 100%;
+      height: 100%;
+      opacity: 0.4;
+      top: 0px;
+      z-index: 9999;
+      position: fixed;
+      background-color: black;
+    }
+    #modal_back,#modal_front{
+      display: none;
+    }
+      
+    #madal_front .container{
+      width: 50%;
+      margin: 0 auto;
+    }
+    .h2,.p{
+      text-align: center;
+    }
+    .hiddenContents{
+      display: none;
+    }
+      
+    /* //portfolio스타일 */
+    .section.portfolio{
+      background-color:#fffff3;
+    }
+    .portfolio_content{
+      display:flex; 
+      flex-flow:row wrap; 
+      position:relative; 
+    }
+    .portfolio_content h2{
+      font-size:24px; 
+      font-weight:500;
+      line-height:36px; 
+      color:#566270;
+      margin-bottom:40px; 
+      width:100%; 
+      display:flex; 
+      flex-flow:column; 
+      justify-content:center;
+      text-align:center;
+    }
+    .portfolio_content>p{
+      text-align:center;
+    }
+    .portfolio_content p{
+      width:100%; 
+      margin-bottom:40px;
+      display:flex; 
+      flex-flow:column; 
+      color:#566270; 
+      justify-content:center;
+    }
+    .portfolio_content .image_box{width:100%;}
+    .portfolio_content ul{
+      display:flex; 
+      flex-flow:column wrap; 
+      align-items:center;
+    }
+    .portfolio_content ul li{
+      width:46.42857142857143%; 
+      margin-bottom:60px;
+    }
+    .portfolio_content ul li:last-child{margin-bottom:0;}
+    .port_img{
+      margin-bottom:10px; 
+      position:relative;
+    }
+    .port_img:hover{
+      content:''; 
+      display:block; 
+      animation-name: turn; 
+      animation-duration:3s; 
+      animation-iteration-count:infinite;
+    }
+    @keyframes turn{
+        0%{transform:rotate(0);}
+        25%{transform:rotate(-15deg);}
+        50%{transform:rotate(0);}
+        75%{transform:rotate(15deg);}
+        100%{transform:rotate(0);}
+    }
+    .port_txt{text-align:center;}
+    .port_txt h3{font-size:18px; font-weight:700;}
+    .port_txt p{margin-bottom:10px;}
+    .port_txt span{cursor:pointer; border:1px solid #566270; border-radius:10px;
+    padding:5px 10px; background-color:#566270;}
+    .port_txt a span{color:#fff;}
+    
+    #modal_front .container{
+      width: 80%;
+      margin: 0 auto;
+    }
+    
+
+
+
+
+
+    /* 640px 이하 슬라이더 스타일 */
+    @media(max-width:639px){
+      .favicon{
+        display: block;
+        margin: 0 auto;
+      }
+      .my_photo{
+        width: 360px;
+      }
+      .hiddenContents{
+        position: absolute;
+        top: 470px;
+        left: -620px;
+        width: 100%;
+        height: 495px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 30px;
+      }
+    #modal_front{
+      overflow: auto;
+      width: 500px;
+      height: 500px;
+      background-color: white;
+      top: 50%;
+      left: 50%;
+      margin-top: -250px; /* Negative half of height. */
+      margin-left: -250px; /* Negative half of width. */
+      position: fixed;
+      z-index: 9999;
+    }
+    .text3{
+      position: relative;
+      right: 30px;
+      font-size: 40px;
+      }
+    }
+
+
+
+
+    /* 640px 이상 슬라이더 스타일 */
+    @media(min-width:640px){
+      .intro .my_slider .slider{
+        background-size:768px;
+      }
+      .favicon{
+        display: block;
+      }
+      .about_tit{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: lightblue;
+        padding-bottom: 6px;
+      }
+      .text1_1{
+        margin-left: 0%;
+        padding: 0;
+      }
+
+      .introduce1{
+        margin-left: 100px; 
+        width: 500px;
+        height: 150px;
+      }
+      .favicon{
+        display: block;
+        margin: 0 auto;
+      }
+      .hiddenContents{
+        position: absolute;
+        width: 100%;
+        height: 830px;
+        left: -720px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 30px;
+      }
+      #modal_front{
+        overflow: auto;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px; /* Negative half of height. */
+        margin-left: -250px; /* Negative half of width. */
+        position: fixed;
+        z-index: 9999;
+      }
+      #modal_front .container{
+        width: 80%;
+        margin: 0 auto;
+      }
+      .text3{
+        position: relative;
+        right: 30px;
+        font-size: 40px;
+      }
+    }
+
+
+
+
+    /* 768px이상 테블릿 스타일 */
+    @media(min-width:768px){
+      .aboutInner{
+        display: flex;
+        flex-direction: row;
+      }
+      .my_photo{
+        width: 100%;
+        height: 94%;
+        display: block;
+        margin: 0 auto;
+        padding-top: 1rem;
+        padding-left: 4em;
+      }
+      /* 인트로 스타일 */
+      .intro{
+        height:420px;
+        margin-top:-42px;
+      }
+      .intro .my_slider .slider {
+        background-size: 105%;
+      }
+      .slider h3{
+        padding:86px 0 28PX;
+      }
+      .btn_page{
+        bottom:48px;
+      }
+      /* about 스타일 */
+      .about_content h3{
+        font-size:16px;
+      }
+      .about_content p{
+        width:56.98924731182796%;
+        margin-right:3.225806451612903%;
+        text-align:left;
+      }
+      .about_content .img_box{
+        width:31.18279569892473%;
+      }
+      .introduce1{
+        display: flex;
+        width: 400px;
+        height: 236px;
+        justify-content: center;
+      }
+      .aboutText{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .hiddenContents {
+        position: absolute;
+        width: 45%;
+        height: 242px;
+        left: -768px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 30px;
+    }
+
+
+      /* skill 스타일 */
+      .skills_content ul{
+        width:65.59139784946237%;
+        margin:0 auto;
+      }
+      .skills_content ul li{
+        width:21.31147540983607%;
+        margin-right:18.0327868852459%;
+      }
+      .skills_content ul li:nth-child(3n){
+        margin-right:0;
+      }
+      /* //portfolio 스타일 */
+      .portfolio_content ul{
+        width:65.59139784946237%;
+        margin:0 auto;
+        flex-direction:row;
+        justify-content:space-between;
+      }
+      .portfolio_content ul li{
+        width:31.9672131147541%;
+      }
+      .portfolio_content ul li:nth-child(3){
+        margin-bottom:0;
+      }
+      .portfolio_content ul li:nth-child(2n+1){
+        margin-right:36.0655737704918%;
+      }
+      .favicon{
+        display: none;
+      }
+      .about_tit{
+        text-align: center;
+        font-size: 20px;
+        font-weight: 600;
+        color: lightblue;
+        padding-bottom: 6px;
+      }
+      #modal_front{
+        overflow: auto;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px; /* Negative half of height. */
+        margin-left: -250px; /* Negative half of width. */
+        position: fixed;
+        z-index: 9999;
+      }
+      #modal_front .container{
+        width: 80%;
+        margin: 0 auto;
+      }
+      .text3{
+        position: relative;
+        right: 30px;
+        font-size: 40px;
+      }
+    }
+
+
+
+    /* 1200px이상 PC스타일 */
+    @media(min-width:1200px){
+      
+      /* intro 스타일 */
+      .intro{
+        margin-top:-52px;
+      }
+      .btn_prev_next{
+        display:flex;
+      }
+      .btn_page{
+        bottom:55px;
+      }
+      /* about 스타일 */
+      .about_content h3{
+        font-size:18px;
+      }
+      .about_content h2,
+      .skills_content h2,
+      .portfolio_content h2{
+        width:23.5%;
+        margin-right:2%;
+        text-align:left;        
+      }
+      .about_content>p,
+      .skills_content>p,
+      .portfolio_content>p{
+        width:40.5%;
+        margin-right:10.5%;   
+        text-align:left;     
+      }
+      .about_content .img_box{
+        width:23.5%;
+      }
+      .btn1,.btn2{
+        margin-top: 1rem;
+        width: 100px;
+        height: 30px;
+      }
+      .text1,.text1_1{
+        font-size: 2rem;
+      }
+      .about_tit{
+        text-align: center;
+        font-size: 70px;
+        font-weight: 600;
+        color: lightblue;
+        padding-bottom: 6px;
+      }
+      .aboutText{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+      }
+      .my_photo {
+        width: 80%;
+        height: 84%;
+      }
+      .text3{
+        position: relative;
+        right: 30px;
+        font-size: 60px;
+      }
+
+      /* 모달스타일 */
+      #modal_front{
+        overflow: auto;
+        width: 500px;
+        height: 500px;
+        background-color: white;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px; /* Negative half of height. */
+        margin-left: -250px; /* Negative half of width. */
+        position: fixed;
+        z-index: 9999;
+      }
+
+      /* skills스타일 */
+      .skills_content p{
+        width:23.5%;
+        margin-right:2%;
+      }
+      .skills_content .img_box{
+        width:49%;
+      }
+      .skills_content ul{
+        width:100%;
+      }
+      .skills_content ul li{
+        width:30.61224489795918%;
+        margin-right:4.081632653061224%;
+      }
+      .skills_content{
+        display: flex;
+        justify-content: space-between;
+      }
+      .container{
+        width: 80%;
+       
+        margin: 0 auto;
+      }
+      .aboutInner{
+        display: flex;
+      }
+      .my_photo {
+        width: 90%;
+        height: 80%;
+    }
+      .hiddenContents {
+        position: absolute;
+        width: 55%;
+        height: 80%;
+        top: 520px;
+        left: -768px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-top: 30px;
+    }
+
+      /* portfolio스타일 */
+      .portfolio_content h2,
+      .portfolio_content>p{
+        width:100%;
+      }
+      .portfolio_content ul{
+        width:83%;
+        align-items:flex-start;
+      }
+      .portfolio_content ul li{
+        width:14%;
+        margin-bottom:0;
+      }
+      .portfolio_content ul li:nth-child(2n+1){
+        margin-right:0;
+      }
+      
+    }

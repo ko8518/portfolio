@@ -1,0 +1,79 @@
+<div id="mega">
+  <div class="content_top">
+    <h2>
+      메가박스
+      <span>MegaBox</span>
+    </h2>
+    <h3>반응형 웹페이지, 기획, 디자인, 퍼블리싱</h3>
+    <p>기여도 : 100%</p>
+    <div class="link">
+      <a href="http://ko8518.dothome.co.kr/megabox/" target="_blank">웹사이트 바로가기</a>
+    </div>
+    <strong>
+      기존의 웹페이지를 분석하여 반응형웹페이지로 리뉴얼 제작한 미래지향형 네이티브 웹사이트
+    </strong>
+  </div>
+  <div class="content_mid">
+    <img src="./images/work_mega.png" alt="메가박스 웹기획서/시안디자인">
+  </div>
+</div>
+
+<div id="hansol">
+  <div class="content_top">
+    <h2>
+      한솔제지
+      <span>Hansol Paper</span>
+    </h2>
+    <h3>반응형 웹페이지, 퍼블리싱</h3>
+    <p>기여도 : 100%</p>
+    <div class="link">
+      <a href="http://ko8518.dothome.co.kr/hansol/" target="_blank">웹사이트 바로가기</a>
+    </div>
+    <strong>
+      기존의 웹페이지를 분석하여 반응형웹페이지로 리뉴얼 제작한 미래지향형 네이티브 웹사이트
+    </strong>
+  </div>
+  <div class="content_mid">
+    <img src="./images/work_mega.png" alt="한솔제지 웹퍼블이싱">
+  </div>
+</div>
+
+<div id="indigo">
+  <div class="content_top">
+    <h2>
+      인디고
+      <span>Indigo</span>
+    </h2>
+    <h3>반응형 웹페이지, 기획, 디자인, 퍼블리싱</h3>
+    <p>기여도 : 100%</p>
+    <div class="link">
+      <a href="http://ko8518.dothome.co.kr/indigo/" target="_blank">웹사이트 바로가기</a>
+    </div>
+    <strong>
+      기존의 웹페이지를 분석하여 반응형웹페이지로 리뉴얼 제작한 미래지향형 네이티브 웹사이트
+    </strong>
+  </div>
+  <div class="content_mid">
+    <img src="./images/work_mega.png" alt="인디고 웹퍼블이싱">
+  </div>
+</div>
+
+<div id="mozilla">
+  <div class="content_top">
+    <h2>
+      모질라 그룹
+      <span>Mozilla Group</span>
+    </h2>
+    <h3>반응형 웹페이지 퍼블리싱</h3>
+    <p>기여도 : 100%</p>
+    <div class="link">
+      <a href="http://ko8518.dothome.co.kr/mozilla/" target="_blank">웹사이트 바로가기</a>
+    </div>
+    <strong>
+      기존의 웹페이지를 분석하여 반응형웹페이지로 리뉴얼 제작한 미래지향형 네이티브 웹사이트
+    </strong>
+  </div>
+  <div class="content_mid">
+    <img src="./images/work_mega.png" alt="모질라 웹퍼블이싱">
+  </div>
+</div>

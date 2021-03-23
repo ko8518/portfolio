@@ -1,0 +1,365 @@
+@charset 'utf-8';
+
+/* 공통 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+.header{
+  padding:0 12px;
+}
+.section,.footer{
+  padding:50px 12px;
+}
+
+.container{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+}
+i::before,i::after{
+  font-weight:600;
+}
+body{
+  overflow-x:hidden; 
+  overflow-y:auto
+}
+/* 스킵네비 스타일 */
+.skip>a{
+  display:block;
+  width:30%;
+  padding:1rem;
+  background-color:#fff;
+  font-size:2rem;
+  color:#df0000;
+  text-align:center;
+  position:fixed;
+  left:50%;
+  top:-100%;
+  transform:translate(-50%,-50%);
+  z-index:10000;
+  outline: 1px solid #df0000;
+}
+.skip>a:focus{
+  top:50%;      
+}
+
+/* 헤더스타일 */
+.header.mo_scroll{
+  background-color:#000;
+}
+.header.mo_scroll .main_tit a{
+  filter:grayscale(1);
+}
+.header.mo_scroll .nav_content{
+  background-color:#000;
+}
+.header.mo_scroll .btn_open_nav{
+  border-color:#fff;
+}
+.header.mo_scroll .btn_open_nav li{
+  background-color:#fff;
+}
+.header.mo_scroll .sns i::before{
+  color:#fff;
+}
+.header{
+  position:fixed;
+  left:0;
+  right:0;
+  top:0;
+  background-color:#fff;
+  z-index:9000;
+  transition:0.3s;
+}
+.header_content{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:space-between;
+  align-items:center;
+  height:50px;
+}
+.main_tit a{
+  font-size:1.5rem;
+  font-weight:700;
+  color:#ff9600;
+  transition:0.3s;
+}
+.btn_open_nav{
+  width:1.625rem;
+  height:1.625rem;
+  border:2px solid #333;
+  border-radius:5.2px;
+  cursor:pointer;
+  display:flex;
+  flex-flow:column nowrap;
+  justify-content:space-evenly;
+  align-items:center;
+  transition:0.3s;
+}
+.btn_open_nav li{
+  text-indent:-9999px;
+  overflow:hidden;
+  width:14px;
+  height:2px;
+  background-color:#333;
+  transition:0.3s;
+}
+.nav{
+  position:fixed;
+  left:100%;/*안보이는상태 */
+  right:-100%;/*안보이는상태 */
+  top:0;
+  bottom:0;
+  z-index:9999;
+  background-color:rgba(0,0,0,0.2);
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:flex-end;
+  transition:0.2s;
+}
+.nav.active{
+  left:0;/*보이는상태 */
+  right:0;/*보이는상태 */
+}
+.nav_content{
+  width:100%;
+  max-width:375px;      
+  background-color:#fff;
+  display:flex;
+  flex-flow:column nowrap; 
+  transition:0.3s;           
+}
+.btn_nav_close{
+  height:50px;
+  margin-bottom:14px;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:flex-end;
+  align-items:center;
+}
+.btn_nav_close i{
+  padding:12px;
+}
+.btn_nav_close i:before{
+  font-size:32px;
+}
+.main_nav{
+  margin-bottom:32px;
+}
+.main_nav li:nth-child(2n+1){
+  height:44px;
+  padding-left:14px;
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:flex-start;
+  align-items:center;
+}
+.main_nav li:nth-child(2n+1) a{
+  display:inline-block;
+  width:100%;
+  background-color:transparent;
+  /* color: white; */
+}
+.main_nav li:nth-child(2n+1):hover{
+  background-color:#df0000;
+}
+.main_nav li:nth-child(2n+1):hover a{
+  font-weight:700;
+  color:#fff;
+}
+.main_nav li:nth-child(2n){
+  height:1px;
+  padding:0 12px;
+  background-color:#ccc;
+  background-clip:content-box;
+  text-indent: -9999px;;
+}
+.sns{
+  display:flex;
+  flex-flow:row nowrap;
+  justify-content:center;
+  
+}
+.sns i:before{
+  font-size:32px;
+  padding:0 10px;
+  transition:0.3s;
+}
+
+/* footer 스타일 */
+.footer{
+  background-color:#ff9600;
+}
+.e_mail{
+  font-size:24px;
+  color:#fff;
+  text-align:center;
+  margin-bottom:24px;
+  transition:0.1s;
+  position:relative;
+}
+.footer:hover .e_mail{
+  font-size:32px;
+  color:#333;
+}
+.e_mail a{
+  position:absolute;
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+  text-indent:-9999px;
+}
+.e_mail:hover::after{
+  content:'클릭하시면 이력서가 다운로드 됩니다.';
+  display:block;
+  position:absolute;
+  left:50%;      
+  top:0;
+  transform:translate(-50%,-100%);
+  color:#fff;
+  background-color:#333;
+  border-radius: 0.3rem;
+  padding:1rem 2rem;
+}
+.footer_content>p{
+  font-size:16px;
+  color:#fff;
+  text-align:center;
+  margin-bottom:32px;
+}
+.footer_content>.row{
+  display:flex;
+  justify-content: space-between;
+
+}
+.footer_content>.row p,
+.footer_content>.row p a{
+  font-size:14px;
+  color:#fff;
+}
+
+/* 768px이상 테블릿 스타일 */
+@media(min-width:768px){
+  .header_content{
+    flex-flow:column nowrap;
+    height:82px;
+  }
+  .main_tit a {
+    font-size:1.875rem;
+  }
+  .nav{
+    position:static;
+    width:100%;
+  }
+  .nav_content{
+    position:relative;
+    max-width:100%;
+  }
+  
+  .main_nav{
+    margin:0;
+    display:flex;
+    flex-flow:row;
+    justify-content:center;
+    align-items:center;
+    transition:0.3s;
+  }
+  .main_nav li{
+    margin:0 1.432291666666667%;
+    padding:0 11px;
+  }
+  .main_nav li:nth-child(2n){
+    display:none;
+  }
+  .main_nav li:nth-child(2n+1){
+    height:36px;
+  }
+  .main_nav li:nth-child(2n+1):hover a{
+    font-weight:400;
+  }
+  .main_nav a{
+    color:#333;
+    transition:0.3s;
+  }
+  .header.mo_scroll .main_nav a{
+    color:#fff;
+  }
+  .sns{
+    position:absolute;
+    right:0;
+    top:-22px;
+  }
+  .sns i:before{
+    padding:0 0 0 15px;
+    font-size:1rem;
+  }
+  .btn_nav_close,.btn_nav{
+    display:none;
+  }
+  /* footer 스타일 */
+  .e_mail{
+    font-size:36px;
+    margin-bottom:42px;
+  }
+  .footer:hover .e_mail{
+    font-size:50px;
+  }
+  .footer_content>p{
+    font-size:18px;
+    margin-bottom:56px;
+  }
+  .footer_content>.row p, .footer_content>.row p a{
+    font-size:16px;
+  }
+}
+
+/* 1200px이상 PC스타일 */
+@media(min-width:1200px){
+  .header{
+    padding:0;
+  }
+  .header_content{
+    flex-flow:row nowrap;
+    height:69px;
+  }
+  .nav{
+    height:inherit;
+  }
+  .main_tit{
+    width:6.5%;
+    margin-right:2%;
+  }
+  .nav_content{
+    flex-flow:row nowrap;
+    justify-content:flex-end;
+    align-items:center;
+  }
+  .main_nav{
+    width:90.7103825136612%;
+    height:100%;
+    margin-right:9.289617486338798%;
+    justify-content:flex-end;
+  }
+  .main_nav li:nth-child(2n+1){
+    height:100%;
+    margin:0;
+    padding:0 32px;
+  }  
+  .sns{
+    position:static
+  }
+  /* footer  스타일 */
+  .e_mail{
+    font-size:60px;
+    margin-bottom:60px;
+  }
+  .footer:hover .e_mail{
+    font-size:80px;
+  }
+  .footer_content>p{
+    font-size:36px;
+    margin-bottom:86px;
+  }
+  .footer_content>.row p, .footer_content>.row p a{
+    font-size:18px;
+  }
+}
